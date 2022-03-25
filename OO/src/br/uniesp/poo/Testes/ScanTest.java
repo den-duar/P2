@@ -1,4 +1,4 @@
-package Testes;
+package br.uniesp.poo.Testes;
 
 import java.util.Scanner;
 

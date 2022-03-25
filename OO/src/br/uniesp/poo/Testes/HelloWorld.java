@@ -1,4 +1,4 @@
-package Testes;
+package br.uniesp.poo.Testes;
 
 public class HelloWorld {
     public static void main(String[] args) {
