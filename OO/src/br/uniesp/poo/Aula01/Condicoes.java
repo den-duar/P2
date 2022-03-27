@@ -1,4 +1,4 @@
-package Aula03;
+package br.uniesp.poo.Aula01;
 
 public class Condicoes {
     public static void main(String[] args) {
