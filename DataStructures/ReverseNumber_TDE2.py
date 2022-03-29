@@ -1,2 +1,3 @@
-numero = input("Informe um número: ")[::-1]
-print(f"O número invertido é {numero}")
+def reverte_numero():
+    numero = input("Informe um número: ")[::-1]
+    return numero;
