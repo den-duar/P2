@@ -1,4 +1,4 @@
-package br.uniesp.poo.Aula03.Exercicio01;
+package br.uniesp.poo.Exercicio01;
 
 import java.util.Scanner;
 
