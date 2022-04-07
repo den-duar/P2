@@ -73,7 +73,11 @@ public class Venda {
         else{
             System.out.println("O produto não está em promoção.");
         }
-        System.out.println("O valor do desconto é: " + this.desconto);
+        if(this.desconto == 0){
+            System.out.println("Desconto não aplicado");
+        }else {
+            System.out.println("O valor do desconto é: " + this.desconto);
+        }
         System.out.println("O valor total da venda é: " + valor);
     }
 
