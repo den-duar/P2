@@ -10,7 +10,7 @@ class FilaDePrioridade:
         return self.numeroDeElementos == 0
     
     def __filaCheia(self):
-        return self.numeroDeElementos == self.capacidade - 1
+        return self.numeroDeElementos == self.capacidade
 
     def enfileirar(self, valor):
         if (self.__filaCheia()):
@@ -22,7 +22,7 @@ class FilaDePrioridade:
         else:
             x = self.numeroDeElementos - 1
             while (x >= 0):
-                if (valor > self.valores[x]):
+                if (valor < self.valores[x]):
                     self.valores[x+1] = self.valores[x]
                 else:
                     break
@@ -44,10 +44,11 @@ class FilaDePrioridade:
         return self.valores[self.numeroDeElementos - 1]
 
 fila = FilaDePrioridade(3)
-fila.desenfileirar()
-fila.desenfileirar()
-fila.desenfileirar()
-fila.enfileirar(1)
-fila.enfileirar(2)
 fila.enfileirar(3)
+fila.enfileirar(2)
+fila.enfileirar(1)
+fila.enfileirar(4)
+print(fila.valores)
+print(fila.desenfileirar())
+fila.enfileirar(4)
 print(fila.valores)
