@@ -22,7 +22,7 @@ class FilaDePrioridade:
         else:
             x = self.numeroDeElementos - 1
             while (x >= 0):
-                if (valor < self.valores[x]):
+                if (valor > self.valores[x]):
                     self.valores[x+1] = self.valores[x]
                 else:
                     break
