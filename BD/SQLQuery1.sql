@@ -4,7 +4,7 @@ go
 use bdi221;
 go
 
---CriaÁ„o tabela produtos
+--Cria√ß√£o tabela produtos
 drop table produto;
 go
 
@@ -23,7 +23,7 @@ alter table produto
 	add constraint pk_produtos primary key(id);
 go
 
---CriaÁ„o tabela prontuario
+--Cria√ß√£o tabela prontuario
 drop table prontuario;
 go
 
@@ -36,7 +36,7 @@ create table prontuario(
 	);
 go
 
---CriaÁ„o tabela pet
+--Cria√ß√£o tabela pet
 drop table pet;
 go
 
@@ -59,7 +59,7 @@ alter table pet
 		references dbo.prontuario(id);
 go
 
---CriaÁ„o tabela forma_pagamento
+--Cria√ß√£o tabela forma_pagamento
 drop table forma_pagamento;
 go
 
@@ -70,7 +70,7 @@ create table forma_pagamento(
 	);
 go
 
---CriaÁ„o tabela funcionario
+--Cria√ß√£o tabela funcionario
 drop table funcionario;
 go
 
@@ -91,7 +91,7 @@ create table funcionario(
 	);
 go
 
---CriaÁ„o tabela cliente
+--Cria√ß√£o tabela cliente
 
 drop table cliente;
 go
@@ -106,7 +106,7 @@ create table cliente(
 	);
 go
 
---CriaÁ„o tabela cliente_pet
+--Cria√ß√£o tabela cliente_pet
 drop table cliente_pet;
 go
 
@@ -121,7 +121,7 @@ create table cliente_pet(
 	references dbo.pet(id)
 );
 go
---CriaÁ„o tabela venda
+--Cria√ß√£o tabela venda
 drop table venda;
 go
 
@@ -139,7 +139,7 @@ create table venda(
 	references dbo.funcionario(id));
 go
 
---CriaÁ„o tabela produto_venda
+--Cria√ß√£o tabela produto_venda
 drop table produto_venda;
 go
 
@@ -159,11 +159,11 @@ go
 
 insert into forma_pagamento values ('dinheiro');
 insert into forma_pagamento values ('pix');
-insert into forma_pagamento values ('cart„o debito');
-insert into forma_pagamento values ('cart„o credito');
+insert into forma_pagamento values ('cart√£o debito');
+insert into forma_pagamento values ('cart√£o credito');
 insert into forma_pagamento values ('cheque');
 insert into forma_pagamento values ('boleto');
-insert into forma_pagamento values ('cart„o credito(parcelado)');
+insert into forma_pagamento values ('cart√£o credito(parcelado)');
 insert into forma_pagamento values ('picpay');
 insert into forma_pagamento values ('mercado pago');
 
@@ -171,18 +171,18 @@ insert into forma_pagamento values ('mercado pago');
 
 insert into produto values('Bola de brinquedo', 'Bola para morder e pegar para cachorros',10.00 ,'P' );
 insert into produto values('Catnip 10g', 'Erva de gato desidratada', 25.00, 'P');
-insert into produto values('Pedras de fire', 'RaÁ„o crocante e flamejante', 0.50, 'P');
-insert into produto values('Banho e Tosa', 'ServiÁo de estÈtica', 60.00, 'S');
+insert into produto values('Pedras de fire', 'Ra√ß√£o crocante e flamejante', 0.50, 'P');
+insert into produto values('Banho e Tosa', 'Servi√ßo de est√©tica', 60.00, 'S');
 insert into produto values('Shampoo Pet Love', 'Para um banho cheiroso', 13.00, 'P');
-insert into produto values('Consulta veterin·ria', 'Consulta especializada', 299.99, 'S');
-insert into produto values('Coleira', 'SeguranÁa para seu pet', 66.90, 'P');
+insert into produto values('Consulta veterin√°ria', 'Consulta especializada', 299.99, 'S');
+insert into produto values('Coleira', 'Seguran√ßa para seu pet', 66.90, 'P');
 
 
 --Inserir dados na tabela cliente
 
 INSERT INTO cliente(nome,email)
 VALUES
-    ('M·rcia Nicole Vieira', 'marcianicolevieira@cdcd.com.br'),
+    ('M√°rcia Nicole Vieira', 'marcianicolevieira@cdcd.com.br'),
     ('Maria Nunes', 'marianunes11@gmail.com'),
     ('Giro Comes', 'Giro_idoso+60@gmail.com'),
     ('Gabriel', 'FogoFest2022@gmail.com'),
@@ -199,9 +199,9 @@ VALUES
 
 	INSERT INTO funcionario (nome,CPF,salario,tipo,n_conselho,especialidade,comissao)
 VALUES
-    ('Rosimere Theodoro Manh„es', '38786704940', 2500.00, 'V', 69643, NULL, NULL),
+    ('Rosimere Theodoro Manh√µes', '38786704940', 2500.00, 'V', 69643, NULL, NULL),
     ('Osmar ', '11122233304', 1500, 'A', NULL, NULL, 15),
-    ('JosÈ Da Silva', '79878314665', 5000, 'V', 12345, 'Dermatologia', NULL),
+    ('Jos√© Da Silva', '79878314665', 5000, 'V', 12345, 'Dermatologia', NULL),
     ('Mestre dos Magos', '00000000000', 2500, 'A', NULL, NULL, NULL),
     ('Biu Silva', '18968412399', 870, 'A', 90228, NULL, NULL),
     ('Serafin da Silva ', '40028922188', 1200, NULL, 17107, NULL, NULL),
@@ -214,11 +214,11 @@ VALUES
     ('Pedro Henrique Yuri Thomas Monteiro', '56765934235', 3000, 'V', 21423, 'Dermatologia', NULL),
     ('sevirino', '54566854504', 10000, 'V', NULL, NULL, 20),
     ('Cristiano Ronaldo', '36367700471', 2000, 'V', 25006, 'Atender', 10),
-    ('RaÁ„o … Aqui', '01440682496', 2500.00, 'V', 24242, 'Atender', 10),
+    ('Rao √© Aqui', '01440682496', 2500.00, 'V', 24242, 'Atender', 10),
     ('Estela Nogueira', '03476005488', 15000, 'A', 90819, NULL, 15),
-    ('Maria J˙lia', '01234567899', 3500.40, 'V', 1519, 'Felinos',NULL),
+    ('Maria J√∫lia', '01234567899', 3500.40, 'V', 1519, 'Felinos',NULL),
     ('Josi', '11111111111', 1750, 'A', NULL, NULL, NULL),
     ('Vinicius de Morais', '75759509071', 2831.83, 'A', 54782, NULL, 18.50),
     ('Caio Vieira', '09833316094', 2500.00, 'V', 23110, 'Aves', 10),
     ('Fausto Silva', '01001101213', 1800.00, 'V', NULL, 'Vendas', 10),
-    ('Alice Ara˙jo', '84224064956', 6000, 'A', 34467, 'Setor pessoal', 15); 
+    ('Alice Ara√∫jo', '84224064956', 6000, 'A', 34467, 'Setor pessoal', 15); 
