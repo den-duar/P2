@@ -1,9 +1,6 @@
 package br.uniesp.poo.LeituraEscrita;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class ManipulaArquivo {
 
@@ -44,7 +41,7 @@ public class ManipulaArquivo {
         try {
             in = new FileReader("C:\\Users\\Nedayrel\\Desktop\\dados.dat");
             int c;
-            while ((c = in read()) !=-1){
+            while ((c = in.read()) !=-1){
                 System.out.println((char) c);
             }
         } catch (FileNotFoundException e) {
@@ -68,9 +65,9 @@ public class ManipulaArquivo {
         String texto = "Testo para gravar no arquivo.";
         try{
             out = new FileWriter("C:\\Users\\Nedayrel\\Desktop\\dados.dat");
-            while(contLetra < texto.lenght()){
+            while(contLetra < texto.length()){
                 out.write(texto.charAt(contLetra));
-                contLetra++
+                contLetra++;
             }
         }catch (FileNotFoundException e){
             e.printStackTrace();
