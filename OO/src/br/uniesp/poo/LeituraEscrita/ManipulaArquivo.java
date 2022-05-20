@@ -7,7 +7,7 @@ public class ManipulaArquivo {
     public void escreverDados(){
         FileOutputStream arq;
         try{
-            arq = new FileOutputStream("C:\\Users\\Nedayrel\\Desktop\\dados.dat");
+            arq = new FileOutputStream("F:\\TI\\dados.dat");
             for(int cont = 65; cont <90; cont++){
                 arq.write(cont);
             }
@@ -23,7 +23,7 @@ public class ManipulaArquivo {
         FileInputStream arq;
         int letra = 0;
         try{
-            arq = new FileInputStream("C:\\Users\\Nedayrel\\Desktop\\dados.dat");
+            arq = new FileInputStream("F:\\TI\\dados.dat");
             while(letra!= -1) {
                 letra = arq.read();
                 System.out.println(letra);
@@ -39,7 +39,7 @@ public class ManipulaArquivo {
     public void lerDadosTxt(){
         FileReader in = null;
         try {
-            in = new FileReader("C:\\Users\\Nedayrel\\Desktop\\dados.dat");
+            in = new FileReader("F:\\TI\\dados.txt");
             int c;
             while ((c = in.read()) !=-1){
                 System.out.println((char) c);
@@ -62,9 +62,9 @@ public class ManipulaArquivo {
     public void escreverDadosTxt(){
         FileWriter out = null;
         int contLetra = 0;
-        String texto = "Testo para gravar no arquivo.";
+        String texto = "Texto para gravar no arquivo.";
         try{
-            out = new FileWriter("C:\\Users\\Nedayrel\\Desktop\\dados.dat");
+            out = new FileWriter("F:\\TI\\dados.txt");
             while(contLetra < texto.length()){
                 out.write(texto.charAt(contLetra));
                 contLetra++;
