@@ -39,5 +39,53 @@ public class ManipulaArquivo {
         }
     }
 
+    public void lerDadosTxt(){
+        FileReader in = null;
+        try {
+            in = new FileReader("C:\\Users\\Nedayrel\\Desktop\\dados.dat");
+            int c;
+            while ((c = in read()) !=-1){
+                System.out.println((char) c);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public void escreverDadosTxt(){
+        FileWriter out = null;
+        int contLetra = 0;
+        String texto = "Testo para gravar no arquivo.";
+        try{
+            out = new FileWriter("C:\\Users\\Nedayrel\\Desktop\\dados.dat");
+            while(contLetra < texto.lenght()){
+                out.write(texto.charAt(contLetra));
+                contLetra++
+            }
+        }catch (FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }finally{
+            if(out != null){
+                try{
+                    out.close();
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+
+            }
+        }
+    }
 }
 

@@ -7,5 +7,7 @@ public class UsaManipulaArquivo {
         ManipulaArquivo ma = new ManipulaArquivo();
         ma.escreverDados();
         ma.lerDados();
+        ma.lerDadosTxt();
+        ma.escreverDadosTxt();
     }
 }
