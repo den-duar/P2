@@ -31,7 +31,7 @@ class FilaCircular:
             return
         temp = self.valores[self.inicio]
         self.inicio += 1
-        if self.inicio == self.capacidade - 1:
+        if self.inicio == self.capacidade:
             self.inicio = 0
         self.numeroElementos -= 1
         return temp
@@ -42,20 +42,25 @@ class FilaCircular:
             return -1
         return self.valores[self.inicio]
 
-fila = FilaCircular(5)
-print(fila.primeiro())
-
-fila.desenfileirar()
-fila.enfileirar(2)
+fila = FilaCircular(3)
 print(fila.primeiro())
 print(fila.valores)
-
-fila.enfileirar(3)
+fila.enfileirar(1)
+print(fila.valores)
+print(fila.desenfileirar())
+print(fila.valores)
+fila.enfileirar(2)
+fila.enfileirar(1)
+print(fila.valores)
+print(fila.desenfileirar())
+print(fila.desenfileirar())
+print(fila.desenfileirar())
 fila.enfileirar(4)
 fila.enfileirar(5)
 fila.enfileirar(6)
-print(fila.valores)
 print(fila.desenfileirar())
-fila.enfileirar(20)
-print(fila.valores)
+print(fila.desenfileirar())
+fila.enfileirar(4)
+print(fila.desenfileirar())
+print(fila.desenfileirar())
 print(fila.desenfileirar())
