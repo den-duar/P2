@@ -1,18 +1,12 @@
 var todos = document.getElementById("todos")
-todos.addEventListener("change", marcarTodos)
+todos.addEventListener("change", mudaMarcar)
 var salvar = document.getElementById("salvar")
 salvar.addEventListener("click", marcados)
 
-function marcarTodos(){
+function mudaMarcar(){
     var listaCheck = document.getElementsByClassName("marcar")
-    if(todos.checked == true){
-        for (var i = 0; i < listaCheck.length; i++){
-        listaCheck[i].checked = true
-        }
-    }else{
-        for (var i = 0; i < listaCheck.length; i++){
-            listaCheck[i].checked = false
-        }
+    for (var i = 0; i < listaCheck.length; i++){
+    listaCheck[i].checked = todos.checked
     }
 }
 
