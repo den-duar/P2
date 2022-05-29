@@ -1,4 +1,3 @@
-from turtle import pos
 import numpy as np
 
 class ListaSequencial:
