@@ -1,0 +1,11 @@
+Na tabela de funcionarios precisei fazer as alterações:
+- Coluna salário de DECIMAL(6,2) para DECIMAL(7,2)
+- Coluna cpf de VARCHAR(11) para VARCHAR(14)
+
+
+Alguns outros ALTER TABLE encontrados no código da SQLQuery1.sql, principalmente pra criação de PKs e FKs, foram realizados durantes as aulas como estudo
+de alteração das tabelas, não precisaram ser adicionados ou modificados para essa ultima entrega.
+
+As perguntas realizadas estão em comentario sobre cada select no arquivo SELECTS.sql.
+
+Adicionados INSERTS da tabela cliente_pet
