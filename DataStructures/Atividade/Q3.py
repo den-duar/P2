@@ -55,4 +55,5 @@ filaSoldados.fim = saiu
 while(not filaSoldados.numeroElementos == 1):
     filaSoldados.desenfileirar()
     saiu = randrange(0,tamanho)
+    filaSoldados.fim = saiu
 print("O soldado sorteado para buscar socorro é o: ", filaSoldados.primeiro())
